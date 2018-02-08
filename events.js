@@ -7,7 +7,8 @@ function start () {
   // The first example is done for you. This will change the background colour of the first div
   // when you mouse over it.
   one()
-  two()  
+  two() 
+  three() 
   // Your turn! Create a new function called `two`, then call it from here.
 }
 
@@ -30,7 +31,11 @@ function two () {
 }
 
 // CREATE FUNCTION three HERE
-
+function three () {
+  var three = document.getElementById('three')
+  three.addEventListener('mouseenter', makePurple)
+  three.addEventListener('mouseleave', makeWhite)
+}
 // CREATE FUNCTION four HERE
 
 // Changes the background color of event's target
@@ -44,4 +49,8 @@ function makeWhite (evt) {
 
 function makeGreen (evt) {
   evt.target.style.backgroundColor = 'green'
+}
+
+function makePurple (evt) {
+  evt.target.style.backgroundColor = 'purple'
 }
